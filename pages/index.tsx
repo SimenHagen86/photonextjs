@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <p class="bg-red-500">placeholder</p>
+        <p className="bg-red-500">placeholder</p>
       </main>
 
       <footer>
