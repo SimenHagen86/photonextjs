@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import Link from 'next/link'
 import { Tab } from '@headlessui/react'
+import Masonry from 'react-masonry-css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -57,7 +58,16 @@ export default function Home(): JSX.Element {
               ))}
             </Tab.List>
             <Tab.Panels className="h-full bg-stone-900 bg-opacity-80  max-w-[900px] w-full p-2 sm:p-4 my-6 ">
-              <Tab.Panel> All Photos</Tab.Panel>
+              <Tab.Panel>
+                <Masonry columnClassName="" className="">
+                  <img src="/ocean1.jpeg" alt="ocean1" />
+                  <img src="/ocean2.jpeg" alt="ocean2" />
+                  <img src="/ocean3.jpeg" alt="ocean3" />
+                  <img src="/ocean4.jpeg" alt="ocean4" />
+                  <img src="/ocean5.jpeg" alt="ocean5" />
+                  <img src="/ocean6.jpeg" alt="ocean6" />
+                </Masonry>
+              </Tab.Panel>
               <Tab.Panel>Oceans</Tab.Panel>
               <Tab.Panel>Forests</Tab.Panel>
             </Tab.Panels>
