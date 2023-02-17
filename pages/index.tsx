@@ -1,11 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
+import { Expletus_Sans } from '@next/font/google'
 import Link from 'next/link'
 import { Tab } from '@headlessui/react'
 import Masonry from 'react-masonry-css'
-
-const inter = Inter({ subsets: ['latin'] })
+import classNames from 'classnames'
 
 const tabs = [
   {
@@ -31,8 +30,10 @@ export default function Home(): JSX.Element {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="fixed  top-0 w-full z-10 flex justify-between items-center h-[90px] px-6">
-        <div>Photography Portfolio</div>
+      <header className="fixed  top-0 w-full z-10 flex justify-between items-center h-[90px] px-10">
+        <span className="uppercase text-lg font-medium">
+          Photography Portfolio
+        </span>
 
         <Link
           href="#"
@@ -49,7 +50,10 @@ export default function Home(): JSX.Element {
                 <Tab className={'p-2'} key={tab.key}>
                   {({ selected }) => (
                     <span
-                      className={selected ? 'text-white' : 'text-stone-600'}
+                      className={classNames(
+                        'uppercase text-lg',
+                        selected ? 'text-white' : 'text-stone-600'
+                      )}
                     >
                       {tab.display}
                     </span>
@@ -62,14 +66,14 @@ export default function Home(): JSX.Element {
                 <Masonry
                   breakpointCols={2}
                   columnClassName=""
-                  className="flex gap-2 "
+                  className="flex gap-4 "
                 >
-                  <img src="/ocean1.jpeg" alt="ocean1" className="mb-2" />
-                  <img src="/ocean2.jpeg" alt="ocean2" className="mb-2" />
-                  <img src="/ocean3.jpeg" alt="ocean3" className="mb-2" />
-                  <img src="/ocean4.jpeg" alt="ocean4" className="mb-2" />
-                  <img src="/ocean5.jpeg" alt="ocean5" className="mb-2" />
-                  <img src="/ocean6.jpeg" alt="ocean6" className="mb-2" />
+                  <img src="/ocean1.jpeg" alt="ocean1" className="mb-4" />
+                  <img src="/ocean2.jpeg" alt="ocean2" className="mb-4" />
+                  <img src="/ocean3.jpeg" alt="ocean3" className="mb-4" />
+                  <img src="/ocean4.jpeg" alt="ocean4" className="mb-4" />
+                  <img src="/ocean5.jpeg" alt="ocean5" className="mb-4" />
+                  <img src="/ocean6.jpeg" alt="ocean6" className="mb-4" />
                 </Masonry>
               </Tab.Panel>
               <Tab.Panel>Oceans</Tab.Panel>
@@ -79,7 +83,7 @@ export default function Home(): JSX.Element {
         </div>
       </main>
 
-      <footer className="h-[60px] flex justify-center items-center">
+      <footer className="h-[90px] flex justify-center items-center uppercase text-lg font-medium">
         <p>Photography portfolio</p>
       </footer>
     </div>
