@@ -6,6 +6,13 @@ import { Tab } from '@headlessui/react'
 import Masonry from 'react-masonry-css'
 import classNames from 'classnames'
 
+import ocean1 from '../public/ocean1.jpeg'
+import ocean2 from '../public/ocean2.jpeg'
+import ocean3 from '../public/ocean3.jpeg'
+import ocean4 from '../public/ocean4.jpeg'
+import ocean5 from '../public/ocean5.jpeg'
+import ocean6 from '../public/ocean6.jpeg'
+
 const tabs = [
   {
     key: 'all',
@@ -20,6 +27,8 @@ const tabs = [
     display: 'Forests',
   },
 ]
+
+const images = []
 
 export default function Home(): JSX.Element {
   return (
@@ -68,12 +77,18 @@ export default function Home(): JSX.Element {
                   columnClassName=""
                   className="flex gap-4 "
                 >
-                  <img src="/ocean1.jpeg" alt="ocean1" className="mb-4" />
+                  <Image src={ocean1} alt="placeholder" className="mb-4" />
+                  <Image src={ocean2} alt="placeholder" className="mb-4" />
+                  <Image src={ocean3} alt="placeholder" className="mb-4" />
+                  <Image src={ocean4} alt="placeholder" className="mb-4" />
+                  <Image src={ocean5} alt="placeholder" className="mb-4" />
+                  <Image src={ocean6} alt="placeholder" className="mb-4" />
+                  {/* <img src="/ocean1.jpeg" alt="ocean1" className="mb-4" />
                   <img src="/ocean2.jpeg" alt="ocean2" className="mb-4" />
                   <img src="/ocean3.jpeg" alt="ocean3" className="mb-4" />
                   <img src="/ocean4.jpeg" alt="ocean4" className="mb-4" />
                   <img src="/ocean5.jpeg" alt="ocean5" className="mb-4" />
-                  <img src="/ocean6.jpeg" alt="ocean6" className="mb-4" />
+                  <img src="/ocean6.jpeg" alt="ocean6" className="mb-4" /> */}
                 </Masonry>
               </Tab.Panel>
               <Tab.Panel>Oceans</Tab.Panel>
